@@ -1,0 +1,137 @@
+.app__footer {
+    width: 100%;
+    min-height: 20vh;
+    background-color: var(--black-color);
+
+    .copyright {
+        width: 100%;
+        padding: 1rem 0;
+        background-color: var(--black-color);
+
+        p {
+            text-transform: uppercase;
+            color: var(--white-color);
+        }
+    }
+
+    .app__footer-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 5rem;
+
+        .app__social {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            flex-direction: row;
+
+            .app__social-block {
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+                flex-direction: column;
+
+                padding: 1rem;
+
+                a {
+                    text-decoration: none;
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    background-color: var(--white-color);
+                    margin: 0.25rem;
+                    cursor: pointer;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    transition: all 0.3s ease-in-out;
+
+                    svg {
+                        width: 15px;
+                        height: 15px;
+                        color: var(--gray-color);
+                    }
+
+                    &:hover {
+                        background-color: var(--secondary-color);
+                        border-color: var(--secondary-color);
+
+                        svg {
+                            color: var(--white-color);
+                        }
+                    }
+
+                    @media screen and (min-width: 2000px) {
+                        width: 70px;
+                        height: 70px;
+
+                        margin: 0.5rem;
+
+                        svg {
+                            width: 30px;
+                            height: 30px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .app__contact-card {
+            min-width: 290px;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+
+            margin: 1rem 0;
+            padding: 1rem;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+
+            .mail {
+                height: 20px;
+                width: 20px;
+                margin: 0 0.5rem;
+            }
+
+            .phone {
+                height: 20px;
+                width: 20px;
+                margin: 0 0.5rem;
+            }
+
+            .p-text {
+                color: var(--white-color);
+            }
+
+            p {
+                font-weight: 500;
+            }
+            a {
+                text-decoration: none;
+                font-weight: 500;
+            }
+            &:hover {
+                a {
+                    color: var(--secondary-color);
+                }
+                scale: 1.1;
+            }
+
+            @media screen and (max-width: 450px) {
+                width: 100%;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            width: 100%;
+        }
+
+        @media screen and (max-width: 900px) {
+            padding: 0 3rem;
+        }
+    }
+}

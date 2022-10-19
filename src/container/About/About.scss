@@ -1,0 +1,99 @@
+.app__about {
+  flex: 1;
+  width: 100%;
+  flex-direction: column;
+}
+
+.app__about-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 88vw;
+  margin-top: 2rem;
+  padding: 2rem 4rem;
+  background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.2));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+
+  .about__content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 50%;
+  }
+
+  .bold-text {
+    font-size: 1.5rem;
+  }
+  .p-text {
+    font-size: 0.95rem;
+  }
+  .profile__pic {
+    width: 50%;
+
+    img {
+      height: auto;
+      width: 400px;
+      border-radius: 10px;
+    }
+  }
+
+  @media screen and (max-width: 1200px) {
+    .profile__pic {
+      img {
+        width: 300px;
+      }
+    }
+  }
+  @media screen and (max-width: 900px) {
+    flex-direction: column-reverse;
+    .profile__pic {
+      width: 100%;
+    }
+    .about__content {
+      padding: 2rem 0;
+      width: 100%;
+    }
+  }
+}
+.app__about-content:hover {
+  transition: all 0.5s ease-in-out;
+  scale: 0.98;
+}
+
+.app__profiles {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.app__profile-item {
+  width: 190px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  margin: 2rem;
+
+  img {
+    width: 100%;
+    height: 170px;
+    border-radius: 15px;
+    object-fit: cover;
+  }
+
+  @media screen and (min-width: 2000px) {
+    width: 370px;
+    margin: 2rem 4rem;
+
+    img {
+      height: 320px;
+    }
+  }
+}

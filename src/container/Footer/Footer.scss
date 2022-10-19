@@ -31,7 +31,6 @@
                 justify-content: center;
                 align-items: flex-start;
                 flex-direction: column;
-
                 padding: 1rem;
 
                 a {
@@ -75,54 +74,61 @@
                         }
                     }
                 }
+
+                @media screen and (max-width: 900px) {
+                    flex-direction: row;
+                    padding: 1rem 0;
+                }
             }
         }
 
-        .app__contact-card {
-            min-width: 290px;
-            display: flex;
-            flex-direction: row;
-            justify-content: flex-start;
-            align-items: center;
+        .app__footer-detail {
+            .app__contact-card {
+                min-width: 290px;
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: center;
 
-            margin: 1rem 0;
-            padding: 1rem;
-            border-radius: 10px;
-            cursor: pointer;
-            transition: all 0.3s ease-in-out;
+                margin: 1rem 0;
+                padding: 1rem;
+                border-radius: 10px;
+                cursor: pointer;
+                transition: all 0.3s ease-in-out;
 
-            .mail {
-                height: 20px;
-                width: 20px;
-                margin: 0 0.5rem;
-            }
-
-            .phone {
-                height: 20px;
-                width: 20px;
-                margin: 0 0.5rem;
-            }
-
-            .p-text {
-                color: var(--white-color);
-            }
-
-            p {
-                font-weight: 500;
-            }
-            a {
-                text-decoration: none;
-                font-weight: 500;
-            }
-            &:hover {
-                a {
-                    color: var(--secondary-color);
+                .mail {
+                    height: 20px;
+                    width: 20px;
+                    margin: 0 0.5rem;
                 }
-                scale: 1.1;
-            }
 
-            @media screen and (max-width: 450px) {
-                width: 100%;
+                .phone {
+                    height: 20px;
+                    width: 20px;
+                    margin: 0 0.5rem;
+                }
+
+                .p-text {
+                    color: var(--white-color);
+                }
+
+                p {
+                    font-weight: 500;
+                }
+                a {
+                    text-decoration: none;
+                    font-weight: 500;
+                }
+                &:hover {
+                    a {
+                        color: var(--secondary-color);
+                    }
+                    scale: 1.1;
+                }
+
+                @media screen and (max-width: 450px) {
+                    width: 100%;
+                }
             }
         }
 
@@ -132,6 +138,10 @@
 
         @media screen and (max-width: 900px) {
             padding: 0 3rem;
+        }
+
+        @media screen and (max-width: 900px) {
+            flex-direction: column;
         }
     }
 }
